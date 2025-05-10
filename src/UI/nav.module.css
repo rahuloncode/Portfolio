@@ -1,0 +1,24 @@
+nav {
+  margin-top: 2rem;
+}
+.nav_gap {
+  padding: 0 6rem;
+
+}
+.nav_link {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  background-color: #000;}
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Castoro", serif;
+}
+.logo p {
+  margin: 0;
+}
+.link_list {
+  color: #302f2f;
+}
