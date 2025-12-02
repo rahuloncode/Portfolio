@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav
-      className="sticky top-0 z-50 bg-[var(--primary)]"
+      className="sticky top-0 z-50 bg-(--primary)"
       style={{ padding: "0 3rem" }}
     >
       <div className="flex justify-between p-1">
