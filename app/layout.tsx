@@ -1,18 +1,26 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Chivo, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import Expertise from "@/components/Expertise";
+import Experience from "@/components/Experience";
+import Project from "@/components/Project";
+import AboutFooter from "@/components/AboutFooter";
+import Contact from "@/components/Contact";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
+const chivo = Chivo({
+  subsets: ["latin"],
+  weight: ["400", "700"], // optional
+  variable: "--font-chivo",
+});
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+const shippori_Mincho = Shippori_Mincho({
+  subsets: ["latin"],
+  weight: ["500", "700"], // optional
+  variable: "--font-ship_min",
+});
 
 export const metadata: Metadata = {
   title: "Codex Rahul",
@@ -25,20 +33,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${chivo.variable}  ${shippori_Mincho.variable} `}
+    >
       <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* navbar */}
-        <Navbar/>
-        
+        <Navbar />
+
         {/* main content */}
 
-        <main>{children}</main>
+        <main>
+          {children} <About />
+          <Expertise />
+          <Experience />
+          <Project />
+          <AboutFooter />
+          {/* <Contact /> */}
+        </main>
 
         {/* Footer */}
 
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
