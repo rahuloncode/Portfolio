@@ -19,7 +19,14 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-8 bg-gray-50/50">
+    <motion.section
+      id="projects"
+      className="py-8 bg-gray-50/50"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="font-serif text-6xl mb-24">Project</h2>
 
@@ -44,7 +51,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

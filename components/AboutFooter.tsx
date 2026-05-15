@@ -10,7 +10,7 @@ const AboutFooter = () => {
 
   // close on outside click
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (e: any) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
         setOpen(false);
       }
@@ -26,8 +26,8 @@ const AboutFooter = () => {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8, delay: 0.8 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
       className="py-16 bg-white flex flex-col items-center container"
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">

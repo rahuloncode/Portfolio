@@ -8,7 +8,6 @@ import Expertise from "@/components/Expertise";
 import Experience from "@/components/Experience";
 import Project from "@/components/Project";
 import AboutFooter from "@/components/AboutFooter";
-import Contact from "@/components/Contact";
 
 const chivo = Chivo({
   subsets: ["latin"],

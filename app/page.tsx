@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/custom.css";
 import Image from "next/image";
 import About from "@/components/About";
+import Link from "next/link";
 
 const imgList = [
   "/1.png",
@@ -42,12 +43,15 @@ const Home = () => {
           <h1 className="text-7xl pb-8">
             Crafting Code, <br /> Designing Dreams.
           </h1>
-          <p className="text-5xl pb-8 ">
+          <p className="text-5xl pb-16  ">
             Hi, I am Rahul, focus on where code meets creativity.
           </p>
-          <button className="p-6 pr-8 pl-8 border border-black text-xl cursor-pointer transition-all duration-300 hover:bg-black hover:text-white">
+          <Link
+            href="mailto:docoderahul@gmail.com"
+            className="p-6 pr-8 pl-8 border border-black text-xl cursor-pointer transition-all duration-300 hover:bg-black hover:text-white"
+          >
             HIRE ME
-          </button>
+          </Link>
         </div>
         <div
           className="rt"

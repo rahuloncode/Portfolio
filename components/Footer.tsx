@@ -21,7 +21,7 @@ const Footer = () => {
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
             className="text-brand-accent text-sm md:text-base font-medium tracking-[0.2em] uppercase"
           >
@@ -32,7 +32,7 @@ const Footer = () => {
           <motion.h3
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] tracking-tight"
           >
@@ -44,7 +44,7 @@ const Footer = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-brand-subtext text-lg md:text-xl max-w-md font-light leading-relaxed"
           >
@@ -56,7 +56,7 @@ const Footer = () => {
             href="mailto:docoderahul@gmail.com"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.3 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -70,7 +70,7 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex items-center gap-8 md:gap-12 pt-8"
           >
@@ -92,7 +92,7 @@ const Footer = () => {
                 key={label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: 0.5 + i * 0.1 }}
               >
                 <Link
@@ -113,7 +113,7 @@ const Footer = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ delay: 0.5, duration: 1 }}
           className="text-center text-brand-subtext/60 text-sm md:text-base tracking-wide"
         >
