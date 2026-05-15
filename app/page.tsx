@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles/custom.css";
 import Image from "next/image";
-import About from "@/components/About";
 import Link from "next/link";
 
 const imgList = [
@@ -28,45 +27,83 @@ const Home = () => {
       setImage(imgList[randomIndex]);
     };
 
-    // set initial image
     getRandomImage();
 
     const interval = setInterval(getRandomImage, 10000);
 
-    return () => clearInterval(interval); // cleanup
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-(--primary)">
-      <div className="container m-auto homepage_grid place-items-center min-h-screen">
-        <div className="lf">
-          <h1 className="text-7xl pb-8">
-            Crafting Code, <br /> Designing Dreams.
-          </h1>
-          <p className="text-5xl pb-16  ">
-            Hi, I am Rahul, focus on where code meets creativity.
-          </p>
-          <Link
-            href="mailto:docoderahul@gmail.com"
-            className="p-6 pr-8 pl-8 border border-black text-xl cursor-pointer transition-all duration-300 hover:bg-black hover:text-white"
-          >
-            HIRE ME
-          </Link>
-        </div>
-        <div
-          className="rt"
-          style={{ position: "relative", width: "100%", height: "500px" }}
-        >
-          <Image
-            className="image"
-            src={loadImg || "/1.png"}
-            alt="Banner Image"
-            fill
-            style={{ objectFit: "cover" }}
-          />
+    <section className="bg-[var(--primary)] min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT CONTENT */}
+          <div className="text-center lg:text-left">
+            <h1
+              className="
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              font-bold
+              leading-tight
+              pb-6
+            "
+            >
+              Crafting Code,
+              <br />
+              Designing Dreams.
+            </h1>
+
+            <p
+              className="
+              text-lg
+              sm:text-2xl
+              md:text-3xl
+              lg:text-4xl
+              leading-relaxed
+              pb-10
+              text-gray-700
+            "
+            >
+              Hi, I am Rahul, focused on where code meets creativity.
+            </p>
+
+            <Link
+              href="mailto:docoderahul@gmail.com"
+              className="
+                inline-block
+                px-8
+                py-4
+                border
+                border-black
+                text-base
+                sm:text-lg
+                font-medium
+                transition-all
+                duration-300
+                hover:bg-black
+                hover:text-white
+              "
+            >
+              HIRE ME
+            </Link>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[550px]">
+            <Image
+              className="object-cover rounded-2xl"
+              src={loadImg || "/1.png"}
+              alt="Banner Image"
+              fill
+              priority
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
