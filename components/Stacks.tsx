@@ -99,7 +99,7 @@ export default function Stacks() {
                 {filteredItems.map((item) => (
                   <motion.div
                     key={item.name}
-                    variants={itemVariants}
+                    // variants={itemVariants}
                     className="glass p-5 rounded-xl border border-white/5 hover:border-white/10 transition-all duration-300 relative group flex flex-col justify-between"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
