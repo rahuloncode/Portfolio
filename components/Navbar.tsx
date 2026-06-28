@@ -57,14 +57,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[var(--primary)] px-6 pb-6">
+        <div className="md:hidden bg-[var(--primary)] px-6 pb-6 text-black">
           <ul className="flex flex-col gap-4 text-lg">
             {links.map((link) => (
               <li key={link.name}>
                 <Link
                   href={link.url}
                   onClick={() => setMenuOpen(false)}
-                  className="block py-2 border-b border-gray-300"
+                  className="block py-2 border-b border-gray-300 text-black"
                 >
                   {link.name}
                 </Link>
