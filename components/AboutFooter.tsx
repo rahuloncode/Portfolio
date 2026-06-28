@@ -28,7 +28,7 @@ const AboutFooter = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5, delay: 0.5 }}
-      className="py-16 bg-white flex flex-col items-center container"
+      className="py-16 bg-white flex flex-col items-center container text-black"
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
         <div className=" m-auto">
@@ -41,7 +41,7 @@ const AboutFooter = () => {
           />
         </div>
         <div>
-          <div className="flex items-baseline gap-4 mb-8">
+          <div className="flex items-baseline gap-4 mb-8 text-black">
             <h2 className="font-serif text-5xl">About</h2>
             <span className="bg-brand text-4xl font-serif italic px-3 py-1 font-bold">
               Myself

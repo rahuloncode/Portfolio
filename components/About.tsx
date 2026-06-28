@@ -35,7 +35,7 @@ const SectionHeading = ({
 const About = () => {
   return (
     <>
-      <section id="about" className="py-16 bg-white container">
+      <section id="about" className="py-16 bg-white container text-black">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading centered>
             I'm a Creative Frontend Developer based in Noida, who loves clean,
