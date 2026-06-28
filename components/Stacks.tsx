@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import { TECH_STACKS } from "../app/data";
 import { Cpu, Database, Cpu as SystemIcon, Wrench } from "lucide-react";
 import "../app/styles/custom_style.css";
@@ -20,20 +22,28 @@ export default function Stacks() {
     (item) => item.category === activeCategory,
   );
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.08 },
+      transition: {
+        staggerChildren: 0.08,
+      },
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
+  const itemVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 15,
+    },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
     },
   };
 
@@ -99,7 +109,7 @@ export default function Stacks() {
                 {filteredItems.map((item) => (
                   <motion.div
                     key={item.name}
-                    // variants={itemVariants}
+                    variants={itemVariants}
                     className="glass p-5 rounded-xl border border-white/5 hover:border-white/10 transition-all duration-300 relative group flex flex-col justify-between"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Variants } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { PROJECTS } from "../app/data";
 import { Project } from "../app/types";
@@ -9,7 +10,7 @@ interface ProjectsProps {
 }
 
 export default function Projects({ onSelectProject }: ProjectsProps) {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +18,7 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 35 },
     visible: {
       opacity: 1,
