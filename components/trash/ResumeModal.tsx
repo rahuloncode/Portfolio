@@ -1,7 +1,17 @@
-import { useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
-import { X, Mail, MapPin, Globe, Award, BookOpen, Printer, Download, Sparkles } from 'lucide-react';
-import { EXPERIENCES } from '../data';
+import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import {
+  X,
+  Mail,
+  MapPin,
+  Globe,
+  Award,
+  BookOpen,
+  Printer,
+  Download,
+  Sparkles,
+} from "lucide-react";
+import { EXPERIENCES } from "../../app/data";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -13,12 +23,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -44,7 +54,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         initial={{ opacity: 0, scale: 0.95, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 30 }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className="relative w-full max-w-3xl max-h-[90vh] bg-surface-container border border-white/10 rounded-2xl overflow-y-auto shadow-2xl z-10 flex flex-col"
       >
         {/* Close Button */}
@@ -105,7 +115,11 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </div>
             </div>
             <p className="text-xs sm:text-sm font-sans text-on-surface-variant print:text-black/80 leading-relaxed max-w-2xl">
-              Systems-minded product engineer with 4+ years of experience constructing high-concurrency real-time charts, zero-latency desktop synchronization algorithms, and rendering pipelines using WebGPU, React, Next.js, and WASM. Dedicated to perfect performance metrics and accessible, elegant visual details.
+              Systems-minded product engineer with 4+ years of experience
+              constructing high-concurrency real-time charts, zero-latency
+              desktop synchronization algorithms, and rendering pipelines using
+              WebGPU, React, Next.js, and WASM. Dedicated to perfect performance
+              metrics and accessible, elegant visual details.
             </p>
           </div>
 
@@ -156,7 +170,10 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                 Education
               </h2>
               <div className="flex gap-3">
-                <BookOpen size={16} className="text-primary shrink-0 mt-1 print:hidden" />
+                <BookOpen
+                  size={16}
+                  className="text-primary shrink-0 mt-1 print:hidden"
+                />
                 <div>
                   <h3 className="text-xs sm:text-sm font-sans font-bold text-on-surface print:text-black">
                     B.S. in Computer Science & Engineering
@@ -165,7 +182,8 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     Stanford University — GPA 3.92
                   </p>
                   <p className="text-[11px] font-sans text-on-surface-variant print:text-black/60 mt-1 leading-relaxed">
-                    Specialized in Graphics Architecture and Human-Computer Interaction systems.
+                    Specialized in Graphics Architecture and Human-Computer
+                    Interaction systems.
                   </p>
                 </div>
               </div>
@@ -178,24 +196,32 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </h2>
               <ul className="space-y-3">
                 <li className="flex gap-3">
-                  <Award size={16} className="text-primary shrink-0 mt-0.5 print:hidden" />
+                  <Award
+                    size={16}
+                    className="text-primary shrink-0 mt-0.5 print:hidden"
+                  />
                   <div>
                     <h3 className="text-xs font-sans font-bold text-on-surface print:text-black">
                       Vercel Contributor Award (2022)
                     </h3>
                     <p className="text-[11px] font-sans text-on-surface-variant print:text-black/70">
-                      Honored for outstanding contributions to open-source Turbopack UI visualizations.
+                      Honored for outstanding contributions to open-source
+                      Turbopack UI visualizations.
                     </p>
                   </div>
                 </li>
                 <li className="flex gap-3">
-                  <Award size={16} className="text-primary shrink-0 mt-0.5 print:hidden" />
+                  <Award
+                    size={16}
+                    className="text-primary shrink-0 mt-0.5 print:hidden"
+                  />
                   <div>
                     <h3 className="text-xs font-sans font-bold text-on-surface print:text-black">
                       Stripe Accessibility Champion (2020)
                     </h3>
                     <p className="text-[11px] font-sans text-on-surface-variant print:text-black/70">
-                      Recognized for driving the company-wide migration to full keyboard and screen-reader accessibility.
+                      Recognized for driving the company-wide migration to full
+                      keyboard and screen-reader accessibility.
                     </p>
                   </div>
                 </li>
