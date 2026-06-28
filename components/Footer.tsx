@@ -80,7 +80,11 @@ const Footer = () => {
                 href: "https://x.com/docoderahul",
                 label: "Twitter",
               },
-              { Icon: FaLinkedinIn, href: "#", label: "LinkedIn" },
+              {
+                Icon: FaLinkedinIn,
+                href: "https://www.linkedin.com/in/rahulsingh-developer/",
+                label: "LinkedIn",
+              },
               {
                 Icon: FiGithub,
                 href: "https://github.com/rahuloncode",
