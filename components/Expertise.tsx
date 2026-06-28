@@ -37,7 +37,7 @@ const Expertise = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className=" bg-gray-50/30 overflow-hidden">
+    <section className=" bg-gray-50/30 overflow-hidden  py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-baseline gap-4 mb-20 text-center justify-center">
           <h2 className="font-serif text-5xl md:text-6xl italic">My</h2>

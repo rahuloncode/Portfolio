@@ -3,11 +3,6 @@ import { Chivo, Shippori_Mincho } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import About from "@/components/About";
-import Expertise from "@/components/Expertise";
-import Experience from "@/components/Experience";
-import Project from "@/components/Project";
-import AboutFooter from "@/components/AboutFooter";
 
 const chivo = Chivo({
   subsets: ["latin"],
@@ -44,14 +39,7 @@ export default function RootLayout({
 
         {/* main content */}
 
-        <main>
-          {children} <About />
-          <Expertise />
-          <Experience />
-          <Project />
-          <AboutFooter />
-          {/* <Contact /> */}
-        </main>
+        <main>{children}</main>
 
         {/* Footer */}
 

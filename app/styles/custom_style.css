@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair", ui-serif, Georgia, serif;
+
+  --color-brand-bg: #121110;
+  --color-brand-accent: #c69c6d;
+  --color-brand-text: #f5f5f3;
+  --color-brand-subtext: #8e8a85;
+  --color-surface: #10131a;
+  --color-surface-container: #1d2027;
+  --color-surface-container-low: #191b23;
+  --color-surface-container-high: #272a31;
+  --color-surface-lowest: #0b0e15;
+  --color-primary: #adc6ff;
+  --color-on-primary: #002e6a;
+  --color-on-surface: #e1e2ec;
+  --color-on-surface-variant: #c2c6d6;
+  --color-outline: #8c909f;
+  --color-outline-variant: #424754;
+}
+
+@layer base {
+}
+
+.homepage_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+.experience {
+  background-color: #0b0e15; /* surface-container-lowest */
+  color: #e1e2ec;
+}
+.project {
+  background-color: #161b27; /* surface-container-lowest */
+  color: #e1e2ec;
+}
+.stack {
+  background-color: #141820; /* surface-container-lowest */
+  color: #e1e2ec;
+}
+
+.timeline-line {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(173, 198, 255, 0.25) 15%,
+    rgba(173, 198, 255, 0.25) 85%,
+    transparent
+  );
+}
