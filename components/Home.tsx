@@ -35,11 +35,11 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="bg-[var(--primary)] min-h-screen flex items-center">
+    <section className="bg-[var(--primary)] min-h-screen flex items-center text-black">
       <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT CONTENT */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left text-black">
             <h1
               className="
               text-4xl
