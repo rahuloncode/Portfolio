@@ -42,12 +42,12 @@ const About = () => {
             simple & unique coding skills. I also enjoy crafting...
           </SectionHeading>
 
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12 text-black">
             <motion.a
               href="/Rahul Singh Resume.pdf" // path to your file
               download // tells browser to download instead of open
               whileHover={{ y: -5 }}
-              className="px-8 py-4 bg-brand font-bold text-sm tracking-widest uppercase flex items-center gap-2 hover:shadow-lg transition-all"
+              className="px-8 py-4 bg-brand font-bold text-sm tracking-widest uppercase flex items-center gap-2 hover:shadow-lg transition-all border border-zinc-200"
             >
               Download Resume <Download size={18} />
             </motion.a>
